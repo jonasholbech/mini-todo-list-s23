@@ -1,9 +1,9 @@
-function ListItem() {
+function ListItem(props) {
   return (
     <li className="ListItem">
       <article>
-        <p>some task</p>
-        <button>Complete</button>
+        <p>{props.task}</p>
+        <button onClick={() => props.completeTask(props.id)}>Complete</button>
       </article>
     </li>
   );

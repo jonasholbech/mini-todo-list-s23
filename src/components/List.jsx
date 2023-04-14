@@ -1,15 +1,11 @@
 import ListItem from "./ListItem";
-function List() {
+function List(props) {
   return (
     <section className="List">
       <ul>
-        <ListItem />
-        <ListItem />
-        <ListItem />
-        <ListItem />
-        <ListItem />
-        <ListItem />
-        <ListItem />
+        {props.tasks.map((task) => (
+          <ListItem completeTask={props.completeTask} {...task} />
+        ))}
       </ul>
     </section>
   );
