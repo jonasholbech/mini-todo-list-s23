@@ -1,6 +1,4 @@
-import React from "react";
-
-function Form() {
+function Form(props) {
   return (
     <form>
       <label htmlFor="form_task">Task</label>

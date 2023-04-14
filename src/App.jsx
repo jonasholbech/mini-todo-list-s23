@@ -1,11 +1,15 @@
+import { useState } from "react";
 import "./App.css";
 import Form from "./components/Form";
 import List from "./components/List";
 
 function App() {
+  const handler = () => {
+    console.log("handler called");
+  };
   return (
     <div className="App">
-      <Form />
+      <Form clickHandler={handler} />
       <List />
     </div>
   );
